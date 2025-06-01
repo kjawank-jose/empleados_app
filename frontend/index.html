@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Empleados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Empleados</h1>
+        
+        <div class="form-container">
+            <h2>Nuevo Empleado</h2>
+            <form id="empleadoForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="puesto">Puesto:</label>
+                    <input type="text" id="puesto">
+                </div>
+                <div class="form-group">
+                    <label for="salario">Salario:</label>
+                    <input type="number" id="salario" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha Contratación:</label>
+                    <input type="date" id="fecha">
+                </div>
+                <button type="submit">Registrar Empleado</button>
+            </form>
+        </div>
+
+        <div class="table-container">
+            <h2>Lista de Empleados</h2>
+            <div class="filters">
+                <label>
+                    <input type="checkbox" id="activosCheck" checked>
+                    Mostrar solo activos
+                </label>
+                <input type="text" id="searchInput" placeholder="Buscar empleados...">
+            </div>
+            <table id="empleadosTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Puesto</th>
+                        <th>Salario</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="pagination">
+                <button id="prevPage">Anterior</button>
+                <span id="pageInfo">Página 1</span>
+                <button id="nextPage">Siguiente</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
